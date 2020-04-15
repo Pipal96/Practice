@@ -1,4 +1,9 @@
 const HeaderButton = document.getElementById("header__button");
+const Modal = document.getElementById("modal");
+const CloseModal = document.getElementById("close-modal");
+const ModalOverlay = document.getElementById("modal-overlay");
+const CloseButton = document.getElementById("close-button");
+
 const HeaderMenu = document.getElementById("header__menu");
 const HeaderPopupMenu = document.getElementById("header__popup-menu");
 const PopupMenu = document.getElementById("menu__popup");
@@ -61,14 +66,56 @@ setInterval(function showAnimationHeader() {
     HeaderButton.classList.add("header__active-button")
 }, 3000);
 
+HeaderButton.addEventListener("click", function (e) {
+
+    e.preventDefault();
+    Modal.classList.remove("modal-close");
+    ModalOverlay.classList.remove("modal-close")
+})
+CloseButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    Modal.classList.add("modal-close");
+    ModalOverlay.classList.add("modal-close")
+});
+ModalOverlay.addEventListener("click", function (e) {
+    e.preventDefault();
+    Modal.classList.add("modal-close");
+    ModalOverlay.classList.add("modal-close")
+})
+
 
 /* BLOCK-ONE */
+/* let isScrolling = false;
+window.addEventListener("scroll", function (e) {
+    if (isScrolling == false) {
+        window.requestAnimationFrame(function (e) {
+            dealWithScrolling(e);
+            isScrolling == false;
+        })
+    }
+    isScrolling == true;
+})
 
+function isPartiallyVisible(el) {
+    let elementBoundary = el.getBoundingClientRect();
+    let top = el.getBoundingClientRect().top;
+    let bottom = el.getBoundingClientRect().bottom;
+    let heigth = el.getBoundingClientRect().heigth;
+    return ((top + history >= 0) && (heigth + window.innerHeight >= 0))
+}
 
-/* window.addEventListener("scroll", function (e) {
-    console.log(document.documentElement.scrollTop)
-    console.log(PopupLine.getBoundingClientRect())
-}) */
+function isFullyVisible(el) {
+    let elementBoundary = el.getBoundingClientRect();
+
+    let top = elementBoundary.top;
+    let bottom = elementBoundary.bottom;
+
+    return ((top >= 0) && (bottom <= window.innerHeight))
+}
+
+function dealWithScrolling(e) {
+
+} */
 
 /* BLOCK-FOUR */
 
@@ -126,3 +173,5 @@ InputRangeValueNine.innerHTML = InputRangeNine.value;
 InputRangeNine.oninput = function () {
     InputRangeValueNine.innerHTML = InputRangeNine.value;
 }
+
+/* BLOCK MODAL */
