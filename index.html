@@ -51,6 +51,7 @@
                 <div class="header__wrap">
                     <div class="header__menu header__menu_paddig" id="header__menu">
                         <a href="#">
+                            <span class="header-nav__popup-menu-hidden-span">menu</span>
                             <span></span>
                         </a>
                     </div>
@@ -92,8 +93,7 @@
                                 <div class="block-one__main-headline">
                                     <h2>About me</h2>
                                 </div>
-                                <div id="block-one__horizon-line"
-                                    class="block-one__horizon-line block-one__horizon-line_active">
+                                <div id="horizon-line-animation" class="block-one__horizon-line">
                                     <hr>
                                 </div>
                                 <div class="block-one__suntitle block-one__suntitle_margin">
@@ -151,7 +151,6 @@
                                     <source srcset="Img/mg4M-oJjSXw.webp" type="image/webp">
                                     <img src="Img/mg4M-oJjSXw.jpg" alt="My-photo">
                                 </picture>
-
                             </div>
                         </div>
                     </div>
@@ -165,8 +164,7 @@
                         <div class="block-one__main-headline block-one__main-headline_position">
                             <h2>Work Experience</h2>
                         </div>
-                        <div id="block-one__horizon-line"
-                            class="block-one__horizon-line block-one__horizon-line_active">
+                        <div id="horizon-line-animation-two" class="block-one__horizon-line">
                             <hr>
                         </div>
 
@@ -266,8 +264,7 @@
                         <div class="block-one__main-headline">
                             <h2>Education</h2>
                         </div>
-                        <div id="block-one__horizon-line"
-                            class="block-one__horizon-line block-one__horizon-line_active">
+                        <div id="horizon-line-animation-three" class="block-one__horizon-line">
                             <hr>
                         </div>
 
@@ -360,8 +357,7 @@
                         <div class="block-one__main-headline block-one__main-headline_color">
                             <h2>My Skills</h2>
                         </div>
-                        <div id="block-one__horizon-line"
-                            class="block-one__horizon-line block-one__horizon-line_active">
+                        <div id="horizon-line-animation-four" class="block-one__horizon-line ">
                             <hr>
                         </div>
 
@@ -469,21 +465,29 @@
                             <form class="input-block__layout" action="#">
                                 <div class="input-block__column">
                                     <div class="input-block__message input-block__message_margin">
-                                        <input type="text" placeholder="Name*" required>
+                                        <input id="input-block__message-name" type="text" placeholder="Name*" required>
+                                        
                                     </div>
                                     <div class="input-block__message input-block__message_margin">
-                                        <input type="email" placeholder="Email*" required>
+                                        <input id="input-block__message-email" type="email" placeholder="Email*"
+                                            required>
+                                        
                                     </div>
                                     <div class="input-block__message">
-                                        <input type="text" placeholder="Subject*" required>
+                                        <input id="input-block__message-subject" type="text" placeholder="Subject*"
+                                            required>
+                                       
                                     </div>
                                 </div>
                                 <div class="input-block__column">
                                     <div class="input-block__message input-block__message_margin">
-                                        <textarea name="message" placeholder="Message*" required></textarea>
+                                        <textarea id="input-block__message-lable" name="message" placeholder="Message*"
+                                            required></textarea>
+                                       
                                     </div>
                                     <div class="input-block__submit">
-                                        <input type="submit" value="Hire me!">
+                                        <input id="input-block__message-submit" type="submit" value="Send">
+                                       
                                     </div>
                                 </div>
                             </form>
@@ -568,21 +572,27 @@
                 <form class="input-block__layout" action="#">
                     <div class="input-block__column">
                         <div class="input-block__message input-block__message_margin">
-                            <input type="text" placeholder="Name*" required>
+                            <input id="input-block__message-name" type="text" placeholder="Name*" required>
+                           
                         </div>
                         <div class="input-block__message input-block__message_margin">
-                            <input type="email" placeholder="Email*" required>
+                            <input id="input-block__message-email" type="email" placeholder="Email*" required>
+                            
                         </div>
                         <div class="input-block__message">
-                            <input type="text" placeholder="Subject*" required>
+                            <input id="input-block__message-subject" type="text" placeholder="Subject*" required>
+                           
                         </div>
                     </div>
                     <div class="input-block__column">
                         <div class="input-block__message input-block__message_margin">
-                            <textarea name="message" placeholder="Message*" required></textarea>
+                            <textarea id="input-block__message-lable" name="message" placeholder="Message*"
+                                required></textarea>
+                            
                         </div>
                         <div class="input-block__submit">
-                            <input type="submit" value="Send">
+                            <input id="input-block__message-submit" type="submit" value="Send">
+                            
                         </div>
                     </div>
                 </form>
@@ -590,7 +600,8 @@
             </div>
         </div>
         <div class="modal-overlay modal-close" id="modal-overlay"></div>
-        <div class="button-footer"><a id="button-up" href="#up">up</a></div>
+        <div id="button-up__containter" class="button-footer button-footer_disabled"><a id="button-up" href="#up"><img
+                    src="Img/button-up.svg" alt="button up"></a></div>
     </div>
     <script src="script.js"></script>
 

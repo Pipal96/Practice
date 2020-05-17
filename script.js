@@ -8,7 +8,7 @@ const HeaderMenu = document.getElementById("header__menu");
 const HeaderPopupMenu = document.getElementById("header__popup-menu");
 const PopupMenu = document.getElementById("menu__popup");
 const BodyPopup = document.querySelector(".body-contaier");
-const PopupLine = document.getElementById("block-one__horizon-line");
+const PopupLineAbout = document.getElementById("horizon-line-animation");
 /* INPUT */
 const InputRangeOne = document.getElementById("range-one");
 const InputRangeValueOne = document.getElementById("input-range-value-one");
@@ -36,6 +36,8 @@ const InputRangeValueEight = document.getElementById("input-range-value-eight");
 
 const InputRangeNine = document.getElementById("range-nine");
 const InputRangeValueNine = document.getElementById("input-range-value-nine");
+const UP_BUTTON_CONTAINER = document.getElementById("button-up__containter");
+const BOLOCK_ABOUT = document.getElementById("about_me");
 
 /* HeaderMenu */
 HeaderMenu.querySelector("a").addEventListener("click", function (e) {
@@ -52,7 +54,7 @@ function closeMenu(e) {
     HeaderMenu.classList.remove("header__menu_active")
     showMenu();
     showPopupBody();
-}
+};
 
 
 function showMenu() {
@@ -203,8 +205,44 @@ UP_BUTTON.addEventListener("click", function (event) {
     })
 })
 
-function showButtonUp(parameter) {
-    
+function dealWithScrolling(event) {
+    UP_BUTTON_CONTAINER.classList.remove("button-footer_disabled");
+    setTimeout(function (parameter) {
+        UP_BUTTON_CONTAINER.classList.add("button-footer_disabled");
+    }, 2500);
+};
+
+/*  E N G I N E  */
+
+const isScrolling = false;
+window.addEventListener("scroll", function (event) {
+    if (isScrolling == false) {
+        window.requestAnimationFrame(function (event) {
+            dealWithScrolling(event);
+            showLineAbout();
+            isScrolling == false;
+        });
+    };
+    isScrolling == true;
+});
+
+/* SCROLL ANIMATION */
+function showLineAbout() {
+    if ((document.documentElement.scrollTop >= 150) && (document.documentElement.scrollTop < 700)) {
+        PopupLineAbout.classList.add("block-one__horizon-line_active");
+    } else {
+        PopupLineAbout.classList.remove("block-one__horizon-line_active");
+    }
 }
+
+
+// function showLineWorkExperience() {
+//     if ((document.documentElement.scrollTop >= 190) && (document.documentElement.scrollTop < 1000)) {
+//         LINE_WORCK_EXPERIENCE.classList.add("block-one__horizon-line_active");
+//     } else {
+//         LINE_WORCK_EXPERIENCE.classList.remove("block-one__horizon-line_active");
+//     }
+// }
+
 
 /* BLOCK MODAL */
