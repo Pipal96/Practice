@@ -632,6 +632,20 @@ body .header__nav-active {
     width: 380px;
     height: 526px;
     margin-left: 46px;
+    position: relative;
+}
+
+.block-one__rigth-box-duo {
+    background-color: #0f4553;
+    width: 380px;
+    height: 526px;
+    position: absolute;
+}
+
+.block-one__rigth-box img {
+    width: 380px;
+    height: 526px;
+    position: absolute;
 }
 
 .block-one__left-box {
@@ -1232,4 +1246,11 @@ body .header__nav-active {
     background-color: var(--color-353541);
     opacity: .5;
     cursor: pointer;
+}
+
+.button-footer a {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    z-index: 1;
 }

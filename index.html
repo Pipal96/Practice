@@ -27,34 +27,27 @@
                 <p>#Front-end | #Developer</p>
             </div>
         </div>
-        <div class="header-popup__nav">
+        <div id="nav-bar" class="header-popup__nav">
             <ul>
-                <li><a href="#">Home</a>
+                <li><a href="#home">Home</a>
                 </li>
-                <hr>
-                <li><a href="#">About Me</a>
+                <li><a href="#about_me">About Me</a>
                 </li>
-                <hr>
-                <li><a href="#">Education</a>
+                <li><a href="#work_experience">Work Experience</a>
                 </li>
-                <hr>
-                <li><a href="#">Work Experience</a>
+                <li><a href="#education">Education</a>
                 </li>
-                <hr>
-                <li><a href="#">Skills</a>
+                <li><a href="#skills">Skills</a>
                 </li>
-                <hr>
                 <li><a href="#">Portfolio</a>
                 </li>
-                <hr>
-                <li><a href="#">Contacts</a></li>
-                <hr>
+                <li><a href="#сontacts">Contacts</a></li>
             </ul>
         </div>
     </div>
     <div class="body-contaier">
         <header>
-            <div class="header__background">
+            <div id="up" class="header__background">
                 <div class="header__wrap">
                     <div class="header__menu header__menu_paddig" id="header__menu">
                         <a href="#">
@@ -62,7 +55,7 @@
                         </a>
                     </div>
 
-                    <div class="header__name-block">
+                    <div id="home" class="header__name-block">
                         <div class="header__name-horizon-line">
                             <hr>
                         </div>
@@ -92,7 +85,7 @@
         <main>
             <!--BLOCK-ONE -->
             <section>
-                <div class="block-one">
+                <div id="about_me" class="block-one">
                     <div class="header__wrap">
                         <div class="block-one__layout">
                             <div class="block-one__left-box">
@@ -134,7 +127,7 @@
                                     </div>
 
                                     <div class="block-one__item">
-                                        <p><b>Web:</b> <a href="https://vk.com/ivanmit" target="_blanck">My VK
+                                        <p><b>Web:</b> <a href="https://vk.com/ivanmit" target="blanck">My VK
                                                 account</a>
                                         </p>
                                     </div>
@@ -153,6 +146,12 @@
                                 </div>
                             </div>
                             <div class="block-one__rigth-box">
+                                <div class="block-one__rigth-box-duo"></div>
+                                <picture>
+                                    <source srcset="Img/mg4M-oJjSXw.webp" type="image/webp">
+                                    <img src="Img/mg4M-oJjSXw.jpg" alt="My-photo">
+                                </picture>
+
                             </div>
                         </div>
                     </div>
@@ -161,7 +160,7 @@
 
             <!-- BLOCK-TWO -->
             <section>
-                <div class="block-two">
+                <div id="work_experience" class="block-two">
                     <div class="header__wrap">
                         <div class="block-one__main-headline block-one__main-headline_position">
                             <h2>Work Experience</h2>
@@ -262,7 +261,7 @@
 
             <!-- BLOCK-THREE -->
             <section>
-                <div class="block-three">
+                <div id="education" class="block-three">
                     <div class="header__wrap">
                         <div class="block-one__main-headline">
                             <h2>Education</h2>
@@ -356,7 +355,7 @@
 
             <!-- BLOCK-FOUR -->
             <section>
-                <div class="block-four">
+                <div id="skills" class="block-four">
                     <div class="header__wrap">
                         <div class="block-one__main-headline block-one__main-headline_color">
                             <h2>My Skills</h2>
@@ -461,7 +460,7 @@
 
             <!-- BLOCK-FIVE -->
             <section>
-                <div class="block-five">
+                <div id="сontacts" class="block-five">
                     <div class="header__wrap header__wrap_width">
                         <div class="headline__h2 headline__h2_position">
                             <h2>Leave a Message</h2>
@@ -591,7 +590,11 @@
             </div>
         </div>
         <div class="modal-overlay modal-close" id="modal-overlay"></div>
-        <script src="script.js"></script>
+        <div class="button-footer"><a id="button-up" href="#up">up</a></div>
+    </div>
+    <script src="script.js"></script>
+
+
 </body>
 
 </html>

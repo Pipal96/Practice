@@ -45,12 +45,14 @@ HeaderMenu.querySelector("a").addEventListener("click", function (e) {
     showPopupBody();
 });
 
-HeaderPopupMenu.querySelector("a").addEventListener("click", function (e) {
+HeaderPopupMenu.querySelector("a").addEventListener("click", closeMenu);
+
+function closeMenu(e) {
     e.preventDefault();
     HeaderMenu.classList.remove("header__menu_active")
     showMenu();
     showPopupBody();
-});
+}
 
 
 function showMenu() {
@@ -81,7 +83,23 @@ ModalOverlay.addEventListener("click", function (e) {
     e.preventDefault();
     Modal.classList.add("modal-close");
     ModalOverlay.classList.add("modal-close")
-})
+});
+
+/* HEADER-NAVBAR */
+
+const NavBar = document.getElementById("nav-bar");
+for (let a of NavBar.querySelectorAll('a[href*="#"')) {
+    a.addEventListener("click", function (e) {
+        closeMenu(e);
+        const BLOCKid = a.getAttribute('href');
+        document.querySelector(BLOCKid).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        })
+    })
+}
+
+
 
 
 /* BLOCK-ONE */
@@ -172,6 +190,21 @@ InputRangeValueNine.innerHTML = InputRangeNine.value;
 
 InputRangeNine.oninput = function () {
     InputRangeValueNine.innerHTML = InputRangeNine.value;
+}
+
+/* UP-BUTTON */
+const UP_BUTTON = document.getElementById("button-up");
+UP_BUTTON.addEventListener("click", function (event) {
+    event.preventDefault();
+    const BLOCKid = UP_BUTTON.getAttribute("href");
+    document.querySelector(BLOCKid).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
+})
+
+function showButtonUp(parameter) {
+    
 }
 
 /* BLOCK MODAL */
